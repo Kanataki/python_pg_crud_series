@@ -1,5 +1,6 @@
 import psycopg2
 try:
+    #Define connection
     connection = psycopg2.connect(user = "postgres",
                                   password = "xxxxxx",
                                   host = "127.0.0.1",
@@ -25,14 +26,14 @@ try:
     count = cursor.rowcount
     print(count, "Record Updated successfully ")
 
-    #Updated Recordprint("Table After updating record ")
+    #Print Updated Record
     newselect = """SELECT * FROM stage1.cake_flavours where cake_id = %s"""
     cursor.execute(newselect, (cake_id,))
     record = cursor.fetchone()
     print(record)
     
 
-    #Execute create
+    #Execute
     cursor.execute(query, record)
     connection.commit()
     count = cursor.rowcount
@@ -40,7 +41,7 @@ try:
 except (Exception, psycopg2.Error) as error :
     print ("Error encountered while Inserting Record :-(", error)
 finally:
-    #closing database connection.
+    #Close DB connection.
         if(connection):
             cursor.close()
             connection.close()

@@ -1,5 +1,6 @@
 import psycopg2
 try:
+    #Define connection
     connection = psycopg2.connect(user = "postgres",
                                   password = "xxxx",
                                   host = "127.0.0.1",
@@ -22,7 +23,7 @@ try:
 except (Exception, psycopg2.Error) as error :
     print ("Error encountered while Creating Table :-(", error)
 finally:
-    #closing database connection.
+    #Close DB connection
         if(connection):
             cursor.close()
             connection.close()
