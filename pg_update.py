@@ -38,10 +38,10 @@ try:
     count = cursor.rowcount
     print(count, "Record Inserted successfully!")
 except (Exception, psycopg2.Error) as error :
-    print ("Error while attempting to Insert Record :-(", error)
+    print ("Error encountered while Inserting Record :-(", error)
 finally:
     #closing database connection.
         if(connection):
             cursor.close()
             connection.close()
-            print("PostgreSQL connection is closed")
+            print("Postgres connection has been closed")

@@ -18,12 +18,12 @@ try:
     #Execute create
     cursor.execute(create)
     connection.commit()
-    print("Table created successfully!")
+    print("Table was created successfully!")
 except (Exception, psycopg2.Error) as error :
-    print ("Error while attempting to Create Table :-(", error)
+    print ("Error encountered while Creating Table :-(", error)
 finally:
     #closing database connection.
         if(connection):
             cursor.close()
             connection.close()
-            print("PostgreSQL connection is closed")
+            print("Postgres connection has been closed")
