@@ -6,4 +6,6 @@ The articles covers basic tasks like creating tables, inserting & deleting rows 
 ## Pre-requisites
 Basic PostgreSQL knowledge i.e Installation, using pgAdmin to create tables and run queries  
 Very Basic SQL.  
-Installing Python and running python scripts.
+Installing Python and running python scripts.  
+
+Feel free to raise any questions
